@@ -236,16 +236,16 @@ export function RoadmapQuizScreen() {
             dispatch({
                 type: 'SET_ROADMAP_RESULTS',
                 payload: {
-                    overall_score: 75,
-                    strengths: ['فهم عام جيد لمقاصد الشريعة', 'استنباط سليم للأحكام الأساسية', 'أسلوب واضح في الإجابة'],
-                    gaps: ['الافتقار لذكر الأدلة التفصيلية من القرآن والسنة', 'الحاجة للتدقيق في الفروق بين الواجب والمستحب', 'اختصار الإجابات في المسائل التي تتطلب تفصيلاً'],
-                    per_question_scores: roadmapQuestions.map(() => 75),
-                    per_question_corrections: roadmapQuestions.map(() => 'إجابتك جيدة وتظهر فهماً أساسياً للمسألة، لكن يُفضل التفصيل ببيان الأدلة الشرعية وشروط الحكم.'),
+                    overall_score: 5,
+                    strengths: ['الرغبة في التعلم والمشاركة'],
+                    gaps: ['عدم وضوح المفاهيم الفقهية الأساسية', 'الإجابات لا تتعلق بالأسئلة المطروحة', 'الحاجة الماسة لدراسة الأساسيات'],
+                    per_question_scores: roadmapQuestions.map(() => 5),
+                    per_question_corrections: roadmapQuestions.map(() => 'الإجابة غير واضحة أو لا علاقة لها بالسؤال المطروح.'),
                     weekly_plan: [
-                        { week: 'الأسبوع 1', focus_topic: 'الأساسيات', resources_description: 'مراجعة أبواب الطهارة والصلاة من كتاب الفقه الميسر', goal: 'إتقان شروط وأركان العبادات' },
-                        { week: 'الأسبوع 2', focus_topic: 'التطبيق العملي', resources_description: 'دراسة المعاملات المالية المتميزة وقراءة في البيوع', goal: 'فهم شروط البيع الصحيح' },
-                        { week: 'الأسبوع 3', focus_topic: 'الآداب والأخلاق', resources_description: 'قراءة أحاديث كتاب رياض الصالحين وتأمل معانيها', goal: 'الربط بين الفقه والسلوك' },
-                        { week: 'الأسبوع 4', focus_topic: 'المراجعة الشاملة', resources_description: 'اختبارات تقييمية ومراجعة المواضيع السابقة', goal: 'ترسيخ المفاهيم المكتسبة' }
+                        { week: 'الأسبوع 1', focus_topic: 'الأساسيات والمبادئ', resources_description: 'البدء بكتيبات الفقه الميسرة جداً والتركيز على مفاهيم الطهارة والصلاة', goal: 'فهم أركان الإسلام الأساسية' },
+                        { week: 'الأسبوع 2', focus_topic: 'التعلم المستمر', resources_description: 'تخصيص وقت يومي لقراءة الفتاوى المبسطة', goal: 'التعود على المصطلحات الفقهية' },
+                        { week: 'الأسبوع 3', focus_topic: 'الآداب والأخلاق', resources_description: 'قراءة أحاديث الأربعين النووية', goal: 'بناء أساس متين في السلوك' },
+                        { week: 'الأسبوع 4', focus_topic: 'المراجعة الشاملة', resources_description: 'إعادة تقييم المفاهيم الأساسية', goal: 'التأكد من استيعاب الأساسيات' }
                     ],
                     compiledQA: roadmapQuestions.map((q, i) => ({
                         question: q,

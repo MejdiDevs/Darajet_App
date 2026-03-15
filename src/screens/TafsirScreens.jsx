@@ -97,9 +97,9 @@ export function TafsirChallengeScreen() {
             console.error('Tafsir scoring error:', err);
             // ai.js returns a structured fallback with null scores on failure
             const errorResults = verses.map(() => ({
-                score: 85,
-                correction_ar: 'تفسيرك يقترب كثيراً من المعنى الصحيح. قد يكون من المفيد التفكير في سياق الآية الكريمة وربطها بالآيات التي قبلها لمزيد من العمق.',
-                encouragement_ar: `أحسنت محاولتك! التدبر في كتاب الله نور للقلب. استمر في هذه السلسلة المباركة.`,
+                score: 5,
+                correction_ar: 'عذراً، التفسير المقدم غير واضح ولا يبدو أنه يرتبط بمعنى الآية الكريمة. أنصحك بالرجوع إلى كتب التفسير المعتمدة.',
+                encouragement_ar: `لا تيأس! كل محاولة هي خطوة للتعلم. تذكر أن ثواب قراءة وتدبر القرآن عظيم.`,
             }));
             dispatch({ type: 'SET_TAFSIR_RESULTS', payload: errorResults });
             dispatch({ type: 'SET_SCREEN', payload: 'tafsir-results' });

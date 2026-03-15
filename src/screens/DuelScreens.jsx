@@ -282,12 +282,12 @@ export function DuelActiveScreen() {
             dispatch({
                 type: 'SET_DUEL_RESULTS',
                 payload: {
-                    winner: 'a',
-                    score_a: 85,
-                    score_b: 70,
-                    verdict_ar: 'نظراً لدقة التفصيل وذكر الدليل الصحيح، اللاعب أ هو الفائز في هذه الجولة.',
-                    correction_a_ar: 'إجابتك مفصلة ومدعمة بالأدلة الصحيحة، أحسنت صنعاً.',
-                    correction_b_ar: 'إجابة جيدة، ولكنها تحتاج إلى مزيد من التفصيل للوصول للحكم الدقيق.',
+                    winner: 'b',
+                    score_a: 5,
+                    score_b: 80,
+                    verdict_ar: 'نظراً لعدم وضوح إجابة اللاعب أ، الفوز من نصيب اللاعب ب في هذه الجولة.',
+                    correction_a_ar: 'عذراً، إجابتك غير واضحة ولا تتعلق بالسؤال. يرجى مراجعة الموضوع والمحاولة مرة أخرى.',
+                    correction_b_ar: 'إجابة جيدة وتشمل النقاط الأساسية.',
                     aiAnswer: duelQuestion.correct_answer_ar || '',
                 },
             });
