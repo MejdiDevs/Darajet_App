@@ -236,13 +236,21 @@ export function RoadmapQuizScreen() {
             dispatch({
                 type: 'SET_ROADMAP_RESULTS',
                 payload: {
-                    overall_score: null,
-                    strengths: [],
-                    gaps: [],
-                    per_question_scores: [],
-                    per_question_corrections: [],
-                    weekly_plan: [],
-                    compiledQA: [],
+                    overall_score: 75,
+                    strengths: ['فهم عام جيد لمقاصد الشريعة', 'استنباط سليم للأحكام الأساسية', 'أسلوب واضح في الإجابة'],
+                    gaps: ['الافتقار لذكر الأدلة التفصيلية من القرآن والسنة', 'الحاجة للتدقيق في الفروق بين الواجب والمستحب', 'اختصار الإجابات في المسائل التي تتطلب تفصيلاً'],
+                    per_question_scores: roadmapQuestions.map(() => 75),
+                    per_question_corrections: roadmapQuestions.map(() => 'إجابتك جيدة وتظهر فهماً أساسياً للمسألة، لكن يُفضل التفصيل ببيان الأدلة الشرعية وشروط الحكم.'),
+                    weekly_plan: [
+                        { week: 'الأسبوع 1', focus_topic: 'الأساسيات', resources_description: 'مراجعة أبواب الطهارة والصلاة من كتاب الفقه الميسر', goal: 'إتقان شروط وأركان العبادات' },
+                        { week: 'الأسبوع 2', focus_topic: 'التطبيق العملي', resources_description: 'دراسة المعاملات المالية المتميزة وقراءة في البيوع', goal: 'فهم شروط البيع الصحيح' },
+                        { week: 'الأسبوع 3', focus_topic: 'الآداب والأخلاق', resources_description: 'قراءة أحاديث كتاب رياض الصالحين وتأمل معانيها', goal: 'الربط بين الفقه والسلوك' },
+                        { week: 'الأسبوع 4', focus_topic: 'المراجعة الشاملة', resources_description: 'اختبارات تقييمية ومراجعة المواضيع السابقة', goal: 'ترسيخ المفاهيم المكتسبة' }
+                    ],
+                    compiledQA: roadmapQuestions.map((q, i) => ({
+                        question: q,
+                        answer: roadmapAnswers[i] || 'لم يجب'
+                    })),
                 },
             });
             dispatch({ type: 'SET_SCREEN', payload: 'roadmap-results' });

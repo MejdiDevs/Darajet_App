@@ -1728,19 +1728,21 @@ body {
 /* ─── MOBILE RESPONSIVENESS ─── */
 @media (max-width: 600px) {
   body {
-    background: var(--noor-bg);
+    background: var(--noor-bg) !important;
   }
 
   .mobile-frame {
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    border-radius: 0;
-    box-shadow: none;
-    border: none;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    max-width: none !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
   }
 
   .mobile-frame::before {
-    display: none;
+    display: none !important;
   }
 }

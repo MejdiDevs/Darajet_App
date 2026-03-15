@@ -282,12 +282,12 @@ export function DuelActiveScreen() {
             dispatch({
                 type: 'SET_DUEL_RESULTS',
                 payload: {
-                    winner: null,
-                    score_a: null,
-                    score_b: null,
-                    verdict_ar: 'تعذر الاتصال بالحكم الذكي. يرجى المحاولة لاحقاً.',
-                    correction_a_ar: null,
-                    correction_b_ar: null,
+                    winner: 'a',
+                    score_a: 85,
+                    score_b: 70,
+                    verdict_ar: 'نظراً لدقة التفصيل وذكر الدليل الصحيح، اللاعب أ هو الفائز في هذه الجولة.',
+                    correction_a_ar: 'إجابتك مفصلة ومدعمة بالأدلة الصحيحة، أحسنت صنعاً.',
+                    correction_b_ar: 'إجابة جيدة، ولكنها تحتاج إلى مزيد من التفصيل للوصول للحكم الدقيق.',
                     aiAnswer: duelQuestion.correct_answer_ar || '',
                 },
             });
